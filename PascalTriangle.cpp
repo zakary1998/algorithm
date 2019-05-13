@@ -42,6 +42,73 @@ void print(bign a){
 	}
 }
 
+//比较大小
+// int compare(bign a,bign b){
+// 	if(a.len>b.len)return 1;//a大于b
+// 	else if(a.len<b.len)return -1;//a<b
+// 	else{
+// 		for(int i=a.len-1;i>=0;i++){
+// 			if(a.d[i]>b.d[i])return 1;
+// 			else if(a.d[i]<b.d[i])return -1;
+// 		}
+// 		return 0;//两个数相等 
+// 	} 
+// };
+// //减法
+// bign sub(bign a,bign b){
+// 	bign c;
+// 	for(int i=0;i<a.len||i<b.len;i++){
+// 		if(a.d[i]<b.d[i]) {//如果不够减法，则向高位借位 
+// 			if(a.d[i+1]>0){
+			
+// 			a.d[i+1]--;
+// 			a.d[i]+=10; 
+// 		}
+// 		}
+// 		c.d[c.len++]=a.d[i]-b.d[i];
+// 	}
+// 	while(c.len-1>=1&&c.d[c.len-1]==0){
+// 		c.len--;
+// 	}//去除高位为0的！同时保留一个最低位 
+// 	return c;
+// };
+
+// //高精度与低精度乘法运算规则
+// bign multi(bign a,int b){
+// 	bign c;
+// 	int carry=0;
+// 	for(int i=0;i<a.len;i++){
+// 		int temp=a.d[i]*b+carry;
+// 		c.d[c.len++]=temp%10;
+// 		carry=temp/10;
+// 	}
+// 	while(carry!=0)
+// 	{
+// 		c.d[c.len++]=carry%10;
+// 		carry/=10;
+// 	}
+// 	return c;
+// };
+
+// //高精度与低精度的除法
+
+// bign divide(bign a,int b,int &r){//r为余数，这里表示为引用
+//     bign c;
+// 	c.len=a.len;
+// 	for(int i=a.len-1;i>=0;i--){
+// 		r=r*10+a.d[i];
+// 		if(r<b) c.d[i]=0;
+// 		else{
+// 			c.d[i]=r/b;
+// 			r=r%b;
+// 		}
+// 	} 
+// 	while(c.len-1>=1&&c.d[c.len-1]==0){
+// 		c.len--;
+// 	}
+// 	return c;
+// } 
+
 bign arr1[210];
 bign arr2[210];
  
